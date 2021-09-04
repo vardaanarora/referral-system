@@ -1,22 +1,23 @@
 const Sequelize = require('sequelize', {
     define: {
-    freezeTableName: true
+    freezeTableName: true,
+    timestamps: false
     }
 });
 const db = require('../config/database');
 
 const Referral = db.define('referral_ledger', {
-    id: {
+    UserID: {
         type: Sequelize.INTEGER,
         primaryKey: true
     },
-    code: {
+    Code: {
         type: Sequelize.STRING
     },
-    amount: {
+    Amount: {
         type: Sequelize.INTEGER
     },
-    transaction_id: {
+    TransactionID: {
         type: Sequelize.INTEGER
     },    
 }, {

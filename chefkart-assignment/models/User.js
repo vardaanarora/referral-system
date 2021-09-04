@@ -1,8 +1,5 @@
-const Sequelize = require('sequelize', {
-    define: {
-    freezeTableName: true
-    }
-});
+const Sequelize = require('sequelize');
+
 const db = require('../config/database');
 
 const User = db.define('user', {

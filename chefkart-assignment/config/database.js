@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize', {
     define: {
-    freezeTableName: true
+    freezeTableName: true,
+    timestamps: false
     }
 });
 module.exports = new Sequelize('referralsystem', 'root', 'mysqladmin', {
@@ -14,4 +15,7 @@ module.exports = new Sequelize('referralsystem', 'root', 'mysqladmin', {
     acquire: 30000,
     idle: 10000
   },
+  define: {
+    timestamps: false
+  }
 });
